@@ -2,7 +2,9 @@
 function lockout_lobby:remove_teams_list
 
 # Clear lobby
-execute at @e[tag=saved_pos] run fill ~-7 312 ~-7 ~7 319 ~7 minecraft:air replace
+execute at @e[tag=saved_pos] run setblock ~5 317 ~-4 minecraft:air
+execute at @e[tag=saved_pos] run setblock ~5 317 ~4 minecraft:air
+execute at @e[tag=saved_pos] run fill ~-13 312 ~-13 ~13 319 ~13 minecraft:air replace
 
 # Set Board Size
 execute if score BoardSizeCounter BoardSizeCounter matches 3 run SetBoardSize 3
