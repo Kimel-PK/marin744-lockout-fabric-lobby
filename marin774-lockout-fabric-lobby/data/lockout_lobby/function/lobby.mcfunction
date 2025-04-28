@@ -155,9 +155,9 @@ gamerule commandBlockOutput false
 # Create Board Size Selector
 
 # - Add BoardSizeCounter variable
-scoreboard players set BoardSizeCounter BoardSizeCounter 3
+scoreboard players set BoardSizeCounter BoardSizeCounter 5
 
-# - Create floor
+# - Create bar
 function lockout_lobby:refresh_board_size_selector
 execute at @e[tag=saved_pos] run setblock ~5 319 ~ minecraft:oak_wall_hanging_sign[facing="west"]{front_text:{messages:['[{"text":""}]','[{"text":"Board Size"}]','[{"text":""}]','[{"text":""}]']},back_text:{messages:['[{"text":""}]','[{"text":"Board Size"}]','[{"text":""}]','[{"text":""}]']}}
 
