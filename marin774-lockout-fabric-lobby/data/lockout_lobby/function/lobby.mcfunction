@@ -155,6 +155,7 @@ gamerule commandBlockOutput false
 # Create Board Size Selector
 
 # - Add BoardSizeCounter variable
+scoreboard objectives add BoardSizeCounter dummy
 scoreboard players set BoardSizeCounter BoardSizeCounter 5
 
 # - Create bar
