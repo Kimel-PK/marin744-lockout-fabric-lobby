@@ -1,0 +1,2 @@
+execute if score BoardSizeCounter BoardSizeCounter matches 4.. run scoreboard players remove BoardSizeCounter BoardSizeCounter 1
+function lockout_lobby:refresh_board_size_selector
