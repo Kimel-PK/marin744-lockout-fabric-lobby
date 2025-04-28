@@ -9,6 +9,7 @@ kill @e[tag=saved_pos]
 # - Save new position
 execute as @p at @s run summon armor_stand ~ 319 ~ {Tags:["saved_pos"],Invisible:1,Marker:1,NoGravity:1} 
 
+function lockout_lobby:corgi
 # - Create glass
 execute at @e[tag=saved_pos] run fill ~-13 316 ~-13 ~13 316 ~13 minecraft:glass replace
 execute at @e[tag=saved_pos] run fill ~-13 316 ~13 ~13 319 ~13 minecraft:glass replace
@@ -20,7 +21,7 @@ execute at @e[tag=saved_pos] run fill ~13 316 ~-13 ~13 319 ~13 minecraft:glass r
 execute at @e[tag=saved_pos] run setblock ~ 315 ~ minecraft:repeating_command_block{Command:"execute as @a at @s if block ~ ~-1 ~ minecraft:glass run team leave @s", auto:1b}
 execute at @e[tag=saved_pos] run setblock ~ 314 ~ minecraft:repeating_command_block{Command:"execute as @a at @s if block ~ ~-1 ~ minecraft:glass run scoreboard players reset @a team_number", auto:1b}
 execute at @e[tag=saved_pos] run setblock ~ 313 ~ minecraft:repeating_command_block{Command:"execute run function lockout_lobby:calm_players", auto:1b}
-execute at @e[tag=saved_pos] run setblock ~ 312 ~ minecraft:repeating_command_block{Command:"execute as @a at @s if entity @s[x=-512,y=-64,z=-512,dx=512,dy=309,dz=512] run tp @s 0 318 0", auto:1b}
+execute at @e[tag=saved_pos] run setblock ~ 312 ~ minecraft:repeating_command_block{Command:"execute as @a at @s if entity @s[x=-512,y=-64,z=-512,dx=1024,dy=309,dz=1024] run tp @p @e[tag=saved_pos,limit=1,sort=nearest]", auto:1b}
 
 # - Team 1 (Red)
 execute at @e[tag=saved_pos] run fill ~9 316 ~-1 ~11 316 ~1 minecraft:red_concrete replace
