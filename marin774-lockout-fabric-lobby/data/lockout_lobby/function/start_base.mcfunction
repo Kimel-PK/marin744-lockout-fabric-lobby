@@ -9,3 +9,4 @@ gamemode survival @a
 
 # Clear corgi
 execute at @e[tag=saved_pos] run fill ~-55 319 ~50 ~52 185 ~50 minecraft:air
+kill @e[tag=saved_pos]

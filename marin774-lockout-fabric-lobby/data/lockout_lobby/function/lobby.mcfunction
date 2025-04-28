@@ -4,9 +4,6 @@ gamerule commandBlockOutput false
 
 execute as @p at @s run summon armor_stand ~ 319 ~ {Tags:["saved_pos"],Invisible:1,Marker:1,NoGravity:1} 
 
-execute at @e[tag=saved_pos] run setblock ~ 100 ~ minecraft:glass
-# kill @e[tag=saved_pos]
-
 # - Clear lobby
 execute at @e[tag=saved_pos] run fill ~-7 312 ~-7 ~7 319 ~7 minecraft:air replace
 
