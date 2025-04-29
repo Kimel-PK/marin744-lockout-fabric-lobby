@@ -161,14 +161,14 @@ scoreboard players set BoardSizeCounter BoardSizeCounter 5
 
 # - Create bar
 function lockout_lobby:refresh_board_size_selector
-execute at @e[tag=saved_pos] run setblock ~5 319 ~ minecraft:oak_wall_hanging_sign[facing="west"]{front_text:{messages:['[{"text":""}]','[{"text":"Board Size"}]','[{"text":""}]','[{"text":""}]']},back_text:{messages:['[{"text":""}]','[{"text":"Board Size"}]','[{"text":""}]','[{"text":""}]']}}
+execute at @e[tag=saved_pos] run setblock ~5 319 ~ minecraft:oak_wall_hanging_sign[facing="west"]{front_text:{messages:['','Board Size','','']},back_text:{messages:['','Board Size','','']}}    
 
 # - Create decrement logic
-execute at @e[tag=saved_pos] run setblock ~5 319 ~-4 minecraft:oak_wall_hanging_sign[facing="west"]{front_text:{messages:['[{"text":""}]','[{"text":"-"}]','[{"text":""}]','[{"text":""}]']},back_text:{messages:['[{"text":""}]','[{"text":"-"}]','[{"text":""}]','[{"text":""}]']}}
+execute at @e[tag=saved_pos] run setblock ~5 319 ~-4 minecraft:oak_wall_hanging_sign[facing="west"]{front_text:{messages:['','-','','']},back_text:{messages:['','-','','']}}
 execute at @e[tag=saved_pos] run setblock ~5 317 ~-4 minecraft:stone_pressure_plate
 execute at @e[tag=saved_pos] run setblock ~5 316 ~-4 minecraft:command_block{Command:"function lockout_lobby:decrement_board_size", auto:0b}
 
 # - Create increment logic
-execute at @e[tag=saved_pos] run setblock ~5 319 ~4 minecraft:oak_wall_hanging_sign[facing="west"]{front_text:{messages:['[{"text":""}]','[{"text":"+"}]','[{"text":""}]','[{"text":""}]']},back_text:{messages:['[{"text":""}]','[{"text":"+"}]','[{"text":""}]','[{"text":""}]']}}
+execute at @e[tag=saved_pos] run setblock ~5 319 ~4 minecraft:oak_wall_hanging_sign[facing="west"]{front_text:{messages:['','+','','']},back_text:{messages:['','+','','']}}
 execute at @e[tag=saved_pos] run setblock ~5 317 ~4 minecraft:stone_pressure_plate
 execute at @e[tag=saved_pos] run setblock ~5 316 ~4 minecraft:command_block{Command:"function lockout_lobby:increment_board_size", auto:0b}

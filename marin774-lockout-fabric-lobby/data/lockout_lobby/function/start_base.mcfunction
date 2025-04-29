@@ -16,6 +16,12 @@ execute if score BoardSizeCounter BoardSizeCounter matches 7 run SetBoardSize 7
 # Set survival
 gamemode survival @a
 
+# Restart cycles
+time set day
+gamerule doWeatherCycle true
+gamerule doDaylightCycle true
+weather clear
+
 # Clear corgi
 execute at @e[tag=saved_pos] run fill ~-55 319 ~50 ~52 185 ~50 minecraft:air
 kill @e[tag=saved_pos]
